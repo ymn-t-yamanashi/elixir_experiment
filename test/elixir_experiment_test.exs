@@ -22,5 +22,26 @@ defmodule ElixirExperimentTest do
     refute Enum.any?([false, false, false])
 
     assert Enum.at(1..10, 0) == 1
+
+    assert Enum.chunk_by(1..6, &(rem(&1, 3) == 0)) == [[1, 2], [3], [4, 5], [6]]
+
+    assert Enum.chunk_every(1..6, 2) == [[1, 2], [3, 4], [5, 6]]
+
+    assert Enum.chunk_every(1..7, 2, 1, [900]) == [
+             [1, 2],
+             [2, 3],
+             [3, 4],
+             [4, 5],
+             [5, 6],
+             [6, 7],
+             [7, 900]
+           ]
+
+    assert Enum.chunk_every(1000..1012, 2, 4) == [
+             [1000, 1001],
+             [1004, 1005],
+             [1008, 1009],
+             [1012]
+           ]
   end
 end
