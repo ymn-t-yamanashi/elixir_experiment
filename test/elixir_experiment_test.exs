@@ -43,5 +43,9 @@ defmodule ElixirExperimentTest do
              [1008, 1009],
              [1012]
            ]
+
+    # Enum.chunk_while(enumerable, acc, chunk_fun, after_fun)
+
+    assert Enum.concat(1000..1003, 1006..1008) == [1000, 1001, 1002, 1003, 1006, 1007, 1008]
   end
 end
