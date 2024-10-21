@@ -49,5 +49,7 @@ defmodule ElixirExperimentTest do
     assert Enum.concat(1000..1003, 1006..1008) == [1000, 1001, 1002, 1003, 1006, 1007, 1008]
 
     assert Enum.count(1..10) == 10
+
+    assert Enum.count_until(100..200, 10) == 10
   end
 end
