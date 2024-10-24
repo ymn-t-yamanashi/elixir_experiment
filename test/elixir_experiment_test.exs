@@ -53,5 +53,7 @@ defmodule ElixirExperimentTest do
     assert Enum.count_until(100..200, 10) == 10
 
     assert Enum.dedup([1, 2, 3, 3, 4, 5, 5]) == [1, 2, 3, 4, 5]
+
+    assert Enum.dedup_by(1..10, fn x -> x > 2 end) == [1, 3]
   end
 end
