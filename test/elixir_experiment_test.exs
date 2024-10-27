@@ -60,5 +60,10 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#drop_every/2
     assert Enum.drop_every(1001..1010, 2) == [1002, 1004, 1006, 1008, 1010]
+
+    # Enum.drop_while()
+
+    # https://hexdocs.pm/elixir/Enum.html#each/2
+    assert Enum.each(1..2, & IO.puts(&1)) == :ok
   end
 end
