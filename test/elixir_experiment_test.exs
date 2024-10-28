@@ -65,5 +65,9 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#each/2
     assert Enum.each(1..2, & IO.puts(&1)) == :ok
+
+    # https://hexdocs.pm/elixir/Enum.html#empty?/1
+    assert Enum.empty?([]) == true
+    assert Enum.empty?([1]) == false
   end
 end
