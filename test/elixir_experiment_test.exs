@@ -64,10 +64,14 @@ defmodule ElixirExperimentTest do
     # Enum.drop_while()
 
     # https://hexdocs.pm/elixir/Enum.html#each/2
-    assert Enum.each(1..2, & IO.puts(&1)) == :ok
+    assert Enum.each(1..2, &IO.puts(&1)) == :ok
 
     # https://hexdocs.pm/elixir/Enum.html#empty?/1
     assert Enum.empty?([]) == true
     assert Enum.empty?([1]) == false
+
+    # https://hexdocs.pm/elixir/Enum.html#fetch/2
+    assert Enum.fetch([10, 20, 22], 1) == {:ok, 20}
+    assert Enum.fetch([10, 20, 22], 11) == :error
   end
 end
