@@ -73,5 +73,10 @@ defmodule ElixirExperimentTest do
     # https://hexdocs.pm/elixir/Enum.html#fetch/2
     assert Enum.fetch([10, 20, 22], 1) == {:ok, 20}
     assert Enum.fetch([10, 20, 22], 11) == :error
+
+    # Enum.fetch!
+
+    # https://hexdocs.pm/elixir/Enum.html#filter/2
+    assert Enum.filter(1..10, fn x -> x > 5 end) == [6, 7, 8, 9, 10]
   end
 end
