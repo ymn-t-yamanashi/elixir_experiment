@@ -78,5 +78,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#filter/2
     assert Enum.filter(1..10, fn x -> x > 5 end) == [6, 7, 8, 9, 10]
+
+    # https://hexdocs.pm/elixir/Enum.html#find/3
+    assert Enum.find(200..206, fn x -> x > 200 end) == 201
   end
 end
