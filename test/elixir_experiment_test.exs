@@ -84,5 +84,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#find_index/2
     assert Enum.find_index(200..206, fn x -> x > 200 end) == 1
+
+    # https://hexdocs.pm/elixir/Enum.html#find_value/2
+    assert Enum.find_value(200..206, fn x -> x == 201 end)
   end
 end
