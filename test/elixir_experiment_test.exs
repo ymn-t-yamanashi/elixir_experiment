@@ -87,5 +87,13 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#find_value/2
     assert Enum.find_value(200..206, fn x -> x == 201 end)
+
+    # https://hexdocs.pm/elixir/Enum.html#flat_map/2
+    assert Enum.flat_map([[100, 102], [200, 202]], fn [x, y] -> [x + 1, y + 1] end) == [
+             101,
+             103,
+             201,
+             203
+           ]
   end
 end
