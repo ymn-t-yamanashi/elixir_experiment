@@ -95,5 +95,14 @@ defmodule ElixirExperimentTest do
              201,
              203
            ]
+
+    # https://hexdocs.pm/elixir/Enum.html#flat_map_reduce/3
+
+    # https://hexdocs.pm/elixir/Enum.html#frequencies/1
+    assert Enum.frequencies(~w/test hoge test fuga fuga/) == %{
+             "fuga" => 2,
+             "hoge" => 1,
+             "test" => 2
+           }
   end
 end
