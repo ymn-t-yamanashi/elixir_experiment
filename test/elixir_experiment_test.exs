@@ -107,5 +107,11 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#frequencies_by/2
     assert Enum.frequencies_by(~w/test abc hoge xyz cde/, &String.length/1) == %{3 => 3, 4 => 2}
+
+    # https://hexdocs.pm/elixir/Enum.html#group_by/3
+    assert Enum.group_by(~w{test abc fuga cde}, &String.length/1) == %{
+             3 => ["abc", "cde"],
+             4 => ["test", "fuga"]
+           }
   end
 end
