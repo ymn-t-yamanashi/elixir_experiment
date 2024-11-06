@@ -113,5 +113,8 @@ defmodule ElixirExperimentTest do
              3 => ["abc", "cde"],
              4 => ["test", "fuga"]
            }
+
+    # https://hexdocs.pm/elixir/Enum.html#fetch/2
+    assert Enum.fetch(1..10, 0) == {:ok, 1}
   end
 end
