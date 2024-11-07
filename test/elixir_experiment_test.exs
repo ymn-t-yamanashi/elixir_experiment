@@ -116,5 +116,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#fetch/2
     assert Enum.fetch(1..10, 0) == {:ok, 1}
+
+    # https://hexdocs.pm/elixir/Enum.html#fetch!/2
+    assert Enum.fetch!(1..10, 0) == 1
   end
 end
