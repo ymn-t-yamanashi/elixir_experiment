@@ -119,5 +119,16 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#fetch!/2
     assert Enum.fetch!(1..10, 0) == 1
+
+    # https://hexdocs.pm/elixir/Enum.html#filter/2
+    assert Enum.filter(1000..1010, fn x -> x > 1003 end) == [
+             1004,
+             1005,
+             1006,
+             1007,
+             1008,
+             1009,
+             1010
+           ]
   end
 end
