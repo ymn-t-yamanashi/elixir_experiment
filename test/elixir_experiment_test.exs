@@ -130,5 +130,8 @@ defmodule ElixirExperimentTest do
              1009,
              1010
            ]
+
+    # https://hexdocs.pm/elixir/Enum.html#find/2
+    assert Enum.find(100..110, fn x -> x == 101 end) == 101
   end
 end
