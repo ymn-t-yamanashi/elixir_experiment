@@ -139,5 +139,16 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#find_value/3
     assert Enum.find_value(1..10, fn x -> x == 2 end) == true
+
+    # https://hexdocs.pm/elixir/Enum.html#flat_map/2
+    assert [1000..1003, 1005..1007] |> Enum.flat_map(fn x -> x end) == [
+             1000,
+             1001,
+             1002,
+             1003,
+             1005,
+             1006,
+             1007
+           ]
   end
 end
