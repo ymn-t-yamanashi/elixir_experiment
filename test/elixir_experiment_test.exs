@@ -150,5 +150,10 @@ defmodule ElixirExperimentTest do
              1006,
              1007
            ]
+
+    # Enum.flat_map_reduce()
+
+    # https://hexdocs.pm/elixir/Enum.html#frequencies/1
+    assert Enum.frequencies(["a", "b", "a"]) == %{"a" => 2, "b" => 1}
   end
 end
