@@ -158,5 +158,12 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#frequencies_by/2
     assert Enum.frequencies_by(~w{ああ いいい かか あ た}, &String.length/1) == %{1 => 2, 2 => 2, 3 => 1}
+
+    # https://hexdocs.pm/elixir/Enum.html#group_by/3
+    assert Enum.group_by(~w{ああ いいい かか あ た}, &String.length/1) == %{
+             1 => ["あ", "た"],
+             2 => ["ああ", "かか"],
+             3 => ["いいい"]
+           }
   end
 end
