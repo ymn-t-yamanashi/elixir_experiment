@@ -168,5 +168,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#intersperse/2
     assert Enum.intersperse(~w/a b c d/, "z") == ["a", "z", "b", "z", "c", "z", "d"]
+
+    # https://hexdocs.pm/elixir/Enum.html#into/2
+    assert Enum.into(%{a: 1, c: 3}, %{b: 2}) == %{c: 3, a: 1, b: 2}
   end
 end
