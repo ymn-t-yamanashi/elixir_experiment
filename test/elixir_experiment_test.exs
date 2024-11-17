@@ -165,5 +165,8 @@ defmodule ElixirExperimentTest do
              2 => ["ああ", "かか"],
              3 => ["いいい"]
            }
+
+    # https://hexdocs.pm/elixir/Enum.html#intersperse/2
+    assert Enum.intersperse(~w/a b c d/, "z") == ["a", "z", "b", "z", "c", "z", "d"]
   end
 end
