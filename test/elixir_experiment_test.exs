@@ -171,5 +171,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#into/2
     assert Enum.into(%{a: 1, c: 3}, %{b: 2}) == %{c: 3, a: 1, b: 2}
+
+    # https://hexdocs.pm/elixir/Enum.html#join/2
+    assert Enum.join(1..10, ", ") == "1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
   end
 end
