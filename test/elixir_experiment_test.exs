@@ -174,5 +174,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#join/2
     assert Enum.join(1..10, ", ") == "1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+
+    # https://hexdocs.pm/elixir/Enum.html#map/2
+    assert Enum.map(1..5, &(&1 * 2)) == [2, 4, 6, 8, 10]
   end
 end
