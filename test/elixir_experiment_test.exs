@@ -177,5 +177,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#map/2
     assert Enum.map(1..5, &(&1 * 2)) == [2, 4, 6, 8, 10]
+
+    # https://hexdocs.pm/elixir/Enum.html#map_every/3
+    assert Enum.map_every(1..10, 2, &(&1 * 10)) == [10, 2, 30, 4, 50, 6, 70, 8, 90, 10]
   end
 end
