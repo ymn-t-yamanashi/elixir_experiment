@@ -186,5 +186,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#map_join/3
     assert Enum.map_join(1..5, ",", &(&1 * 2)) == "2,4,6,8,10"
+
+    # https://hexdocs.pm/elixir/Enum.html#map_reduce/3
+    assert Enum.map_reduce(1..3, 0, fn x, acc -> {x * acc, acc + 1} end) == {[0, 2, 6], 3}
   end
 end
