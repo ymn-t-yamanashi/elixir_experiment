@@ -183,5 +183,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#map_intersperse/3
     assert Enum.map_intersperse(1..3, "A", &(&1 + 1000)) === [1001, "A", 1002, "A", 1003]
+
+    # https://hexdocs.pm/elixir/Enum.html#map_join/3
+    assert Enum.map_join(1..5, ",", &(&1 * 2)) == "2,4,6,8,10"
   end
 end
