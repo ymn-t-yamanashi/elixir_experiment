@@ -189,5 +189,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#map_reduce/3
     assert Enum.map_reduce(1..3, 0, fn x, acc -> {x * acc, acc + 1} end) == {[0, 2, 6], 3}
+
+    # https://hexdocs.pm/elixir/Enum.html#max/1
+    assert Enum.max(1..10) == 10
   end
 end
