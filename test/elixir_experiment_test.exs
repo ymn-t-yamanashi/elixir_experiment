@@ -192,5 +192,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#max/1
     assert Enum.max(1..10) == 10
+
+    # https://hexdocs.pm/elixir/Enum.html#max_by/2
+    assert Enum.max_by(["a", "aaa", "kkkk", "aa"], fn x -> String.length(x) end) == "kkkk"
   end
 end
