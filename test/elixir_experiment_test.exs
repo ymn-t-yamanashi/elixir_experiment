@@ -195,5 +195,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#max_by/2
     assert Enum.max_by(["a", "aaa", "kkkk", "aa"], fn x -> String.length(x) end) == "kkkk"
+
+    # https://hexdocs.pm/elixir/Enum.html#member?/2
+    assert Enum.member?(1..5, 5)
   end
 end
