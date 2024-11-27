@@ -198,5 +198,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#member?/2
     assert Enum.member?(1..5, 5)
+
+    # https://hexdocs.pm/elixir/Enum.html#min/2
+    assert Enum.min(2..5) == 2
   end
 end
