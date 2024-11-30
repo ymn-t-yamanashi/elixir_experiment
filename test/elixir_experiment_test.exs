@@ -202,7 +202,10 @@ defmodule ElixirExperimentTest do
     # https://hexdocs.pm/elixir/Enum.html#min/2
     assert Enum.min(2..5) == 2
 
-    # https://hexdocs.pm/elixir/Enum.html#min_by?/4
+    # https://hexdocs.pm/elixir/Enum.html#min_by/4
     assert Enum.min_by(["a", "aaa", "kkkk", "aa"], fn x -> String.length(x) end) == "a"
+
+    # https://hexdocs.pm/elixir/Enum.html#min_max/1
+    assert Enum.min_max(1..100) == {1, 100}
   end
 end
