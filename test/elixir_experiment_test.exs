@@ -207,5 +207,9 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#min_max/1
     assert Enum.min_max(1..100) == {1, 100}
+
+    # https://hexdocs.pm/elixir/Enum.html#min_max_by/3
+    assert Enum.min_max_by(["jj", "abc", "a", "aaaaax", "asdd"], &String.length/1) ==
+             {"a", "aaaaax"}
   end
 end
