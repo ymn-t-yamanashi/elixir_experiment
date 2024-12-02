@@ -211,5 +211,8 @@ defmodule ElixirExperimentTest do
     # https://hexdocs.pm/elixir/Enum.html#min_max_by/3
     assert Enum.min_max_by(["jj", "abc", "a", "aaaaax", "asdd"], &String.length/1) ==
              {"a", "aaaaax"}
+
+    # https://hexdocs.pm/elixir/Enum.html#product/1
+    assert Enum.product([2, 5, 9]) == 90
   end
 end
