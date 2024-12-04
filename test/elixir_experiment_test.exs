@@ -214,5 +214,9 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#product/1
     assert Enum.product([2, 5, 9]) == 90
+
+    # https://hexdocs.pm/elixir/Enum.html#random/1
+    random = Enum.random(10..15)
+    assert random >= 10 and random <= 15
   end
 end
