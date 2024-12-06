@@ -218,5 +218,8 @@ defmodule ElixirExperimentTest do
     # https://hexdocs.pm/elixir/Enum.html#random/1
     random = Enum.random(10..15)
     assert random >= 10 and random <= 15
+
+    # https://hexdocs.pm/elixir/Enum.html#reduce/2
+    assert Enum.reduce(1..10, fn x, acc -> x + acc end) == 55
   end
 end
