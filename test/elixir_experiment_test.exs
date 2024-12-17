@@ -222,11 +222,9 @@ defmodule ElixirExperimentTest do
     # https://hexdocs.pm/elixir/Enum.html#reduce/2
     assert Enum.reduce(1..10, fn x, acc -> x + acc end) == 55
 
-
     # assert Enum.reduce_while()
 
     # https://hexdocs.pm/elixir/Enum.html#reject/2
     assert Enum.reject(1..3, fn x -> x == 2 end) == [1, 3]
-
   end
 end
