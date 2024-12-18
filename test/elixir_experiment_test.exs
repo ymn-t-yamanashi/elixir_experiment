@@ -226,5 +226,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#reject/2
     assert Enum.reject(1..3, fn x -> x == 2 end) == [1, 3]
+
+    # https://hexdocs.pm/elixir/Enum.html#reverse/1
+    assert Enum.reverse(1..5) == [5, 4, 3, 2, 1]
   end
 end
