@@ -232,5 +232,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#reverse_slice/3
     assert Enum.reverse_slice(1..5, 1, 2) == [1, 3, 2, 4, 5]
+
+    # https://hexdocs.pm/elixir/Enum.html#fetch/2
+    assert Enum.fetch(2..5, 1) == {:ok, 3}
   end
 end
