@@ -229,5 +229,8 @@ defmodule ElixirExperimentTest do
 
     # https://hexdocs.pm/elixir/Enum.html#reverse/1
     assert Enum.reverse(1..5) == [5, 4, 3, 2, 1]
+
+    # https://hexdocs.pm/elixir/Enum.html#reverse_slice/3
+    assert Enum.reverse_slice(1..5, 1, 2) == [1, 3, 2, 4, 5]
   end
 end
